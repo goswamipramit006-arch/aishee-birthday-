@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+:root{--pink:#ff5f9e;--deep:#8d4b9f;--ink:#422d4d;--muted:#806d85;--cream:#fff9fc}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:'DM Sans',sans-serif;background:radial-gradient(circle at 10% 10%,#ffe0ee 0,transparent 30%),radial-gradient(circle at 90% 25%,#e8ddff 0,transparent 28%),linear-gradient(145deg,#fff8fb,#f8f2ff);overflow-x:hidden}
+.sparkle-bg{position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(#ff8db9 1px,transparent 1px),radial-gradient(#b78bdf 1px,transparent 1px);background-size:37px 37px,53px 53px;background-position:0 0,17px 21px}
+.shell{width:min(100% - 28px,540px);margin:0 auto;padding:24px 0 30px;position:relative}
+.topline{display:flex;justify-content:space-between;align-items:center;color:#a16a9e;font-size:10px;font-weight:800;letter-spacing:2px;padding:4px 8px 15px}
+.tiny-heart{color:var(--pink);font-size:20px}
+.card{background:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.95);border-radius:27px;padding:27px 23px;margin:0 0 17px;box-shadow:0 15px 45px rgba(132,83,142,.11);backdrop-filter:blur(10px)}
+.hero{text-align:center;padding:36px 25px 30px;position:relative;overflow:hidden}
+.sticker{font-size:42px;margin-bottom:14px;animation:bob 2.5s ease-in-out infinite}
+.eyebrow{font-size:10px;letter-spacing:2px;font-weight:800;color:#b06a9b;margin:0 0 12px}
+h1,h2{font-family:'Playfair Display',serif;line-height:1.08;margin:0 0 15px}
+h1{font-size:clamp(37px,10vw,53px);letter-spacing:-1.5px}
+h1 span,.pink{color:var(--pink)}
+h2{font-size:32px}
+.intro,.card p:not(.eyebrow),.final-card p{color:var(--muted);font-size:14px;line-height:1.75}
+.intro{max-width:390px;margin:0 auto 23px}
+.primary,.secondary{border:0;border-radius:999px;padding:15px 22px;font:700 14px 'DM Sans',sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.primary{color:white;background:linear-gradient(100deg,#ff6ca8,#b46cce);box-shadow:0 9px 20px rgba(224,102,166,.28)}
+.primary span{padding-left:10px}
+.secondary{color:#a34d83;background:#ffe8f2;margin-top:12px}
+.primary:active,.secondary:active{transform:scale(.97)}
+.micro{font-size:10px!important;margin:15px 0 0;color:#ae9ab0!important}
+.hidden{display:none}
+.content{animation:rise .7s ease both}
+.greeting{text-align:center}
+.badge-row{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:17px}
+.badge-row span{font-size:10px;font-weight:700;background:#fff0f6;color:#a64e81;border-radius:30px;padding:9px 12px}
+.jokes h2{margin-bottom:21px}
+.joke{display:flex;align-items:center;gap:12px;border-top:1px dashed #f0d6e5;padding:13px 0}
+.joke b{color:#ed75a7;font-size:12px}
+.joke p{flex:1;margin:0!important;font-size:13px!important}
+.cake-card{text-align:center}
+.cake-hint{margin-bottom:20px}
+.cake{display:flex;flex-direction:column;align-items:center;background:none;border:0;width:100%;cursor:pointer;padding:0;margin:8px auto 10px}
+.flames{font-size:25px;letter-spacing:12px;padding-left:12px;filter:drop-shadow(0 0 8px #ffc85c);transition:opacity .3s}
+.cake-top{width:174px;height:25px;background:#ffb6d0;border:4px solid #fff0f5;border-radius:50%;margin-top:4px;z-index:1}
+.cake-body{width:166px;height:82px;margin-top:-9px;border-radius:12px 12px 18px 18px;background:repeating-linear-gradient(0deg,#ff8fb7 0 18px,#ffd1e2 18px 34px);border:4px solid #fff0f5;color:#9b4779;font-weight:800;font-size:13px;letter-spacing:2px;display:grid;place-content:center;line-height:1.5;box-shadow:inset 0 -8px 0 rgba(220,92,146,.1)}
+.cake-plate{width:205px;height:15px;border-radius:50%;background:#d9b8e8;margin-top:-2px;box-shadow:0 5px 0 #c6a2d9}
+.wish-message{font-weight:700;color:#b2538b!important;font-size:12px!important}
+.letter{background:linear-gradient(145deg,#fff,#fff5fa);border:1px solid #ffe1ed}
+.letter-icon{font-size:31px;margin-bottom:13px}
+.letter p{font-size:13px!important}
+.signoff{font-weight:800;color:#c15b91!important;margin-top:20px}
+.final-card{text-align:center;padding:26px 22px 20px;background:linear-gradient(145deg,#ffdeed,#eee2ff);border-radius:28px;box-shadow:0 15px 40px rgba(140,85,154,.13)}
+.big-heart{font-size:48px;animation:heartbeat 1.5s infinite}
+.final-card h2{font-size:39px;margin:8px 0}
+.final-card p{max-width:360px;margin:0 auto 18px}
+.footer-note{font-size:10px!important;margin-top:18px!important}
+footer{text-align:center;font-size:10px;color:#a58ca8;padding:20px 5px 0}
+.confetti{position:fixed;top:-15px;z-index:10;pointer-events:none;animation:fall linear forwards}
+@keyframes bob{50%{transform:translateY(-8px) rotate(5deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:.2}}
+@media(min-width:560px){.shell{padding-top:35px}.card{padding:31px}.hero{padding:44px 35px}}
